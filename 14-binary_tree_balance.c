@@ -35,7 +35,6 @@ int binary_tree_balance(const binary_tree_t *tree)
 	right = binary_height(tree->right);
 
 	/* balance factor = left height - right height */
-	printf("%d - %d\n", left, right);
 	return (left - right);
 }
 
@@ -65,8 +64,6 @@ size_t recurse_for_height(const binary_tree_t *tree)
 
 	heightL = recurse_for_height(tree->left);
 	heightR = recurse_for_height(tree->right);
-
-	printf("%lu - %lu\n", heightL, heightR);
 	if (heightL > heightR)
 		return (heightL + 1);
 	else
